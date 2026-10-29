@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Jersey 10";
+  src: url("jersey10.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --abyss: #0d0b14;
+  --surface: #161224;
+  --edge: #2e2645;
+  --bone: #ece6f5;
+  --ash: #a89fbd;
+  --gold: #ffd700;
+  --crimson: #ff2a54;
+  --arcane: #00f5d4;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--abyss); }
+
+body {
+  margin: 0;
+  background: var(--abyss);
+  color: var(--bone);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+h1, h2, h3, .brand, nav a, .button {
+  font-family: "Jersey 10", system-ui, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: 3rem; line-height: 1; margin: 0 0 8px; color: var(--gold); }
+h2 { font-size: 1.9rem; margin: 40px 0 8px; color: var(--gold); }
+h3 { font-size: 1.4rem; margin: 24px 0 4px; color: var(--arcane); }
+
+a { color: var(--arcane); }
+p, li { color: var(--bone); }
+.muted { color: var(--ash); }
+
+header.top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--edge);
+  background: var(--surface);
+}
+header.top img { width: 36px; height: 36px; image-rendering: pixelated; }
+header.top .brand { font-size: 1.7rem; color: var(--bone); text-decoration: none; }
+header.top nav { margin-left: auto; display: flex; gap: 16px; }
+header.top nav a { font-size: 1.3rem; text-decoration: none; }
+
+.hero { text-align: center; padding-top: 24px; }
+.hero img.icon {
+  width: 160px;
+  height: 160px;
+  image-rendering: pixelated;
+  border-radius: 24px;
+  box-shadow: 0 0 48px rgba(255, 42, 84, 0.35);
+}
+.hero .tagline { font-size: 1.2rem; color: var(--ash); max-width: 520px; margin: 0 auto; }
+
+.panel {
+  background: var(--surface);
+  border: 2px solid var(--edge);
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.panel.gold { border-color: var(--gold); }
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 1.5rem;
+  color: var(--abyss);
+  background: var(--gold);
+  text-decoration: none;
+  box-shadow: 4px 4px 0 #6a5600;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--edge); }
+th { color: var(--ash); font-weight: 600; }
+
+footer { margin-top: 48px; color: var(--ash); font-size: 0.9rem; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.4rem; }
+  header.top nav { gap: 10px; }
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  td { border: 0; padding: 2px 0; }
+  tr { border-bottom: 1px solid var(--edge); padding: 8px 0; }
+}

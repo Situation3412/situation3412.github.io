@@ -1,0 +1,3 @@
+# app-ads.txt for Scrollbane (https://situation3412.github.io/)
+# Once the AdMob account exists, add its line below (AdMob > Apps > app-ads.txt shows it), e.g.:
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
